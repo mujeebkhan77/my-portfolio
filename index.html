@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majeebullah | Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #2C2F3E;
+            color: #E0E0E0;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #1ABC9C, #3498DB);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
+            border-right: 3px solid #1ABC9C;
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.2);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        section {
+            border-bottom: 1px solid #1f2937;
+        }
+
+        a {
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #22d3ee;
+        }
+    </style>
+</head>
+
+<body class="text-gray-300">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold gradient-text">MAJEEBULLAH</h1>
+                    <p class="text-sm text-teal-300 italic">Frontend Web Developer & Problem Solver</p>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-white-700 hover:text-white-600 transition">About</a>
+                    <a href="#skills" class="text-white-700 hover:text-white-600 transition">Skills</a>
+                    <a href="#projects" class="text-white-700 hover:text-white-600 transition">Achievements</a>
+                    <a href="#education" class="text-white-700 hover:text-white-600 transition">Education</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#about" class="text-white-700 hover:text-white-600 transition">About</a>
+                    <a href="#skills" class="text-white-700 hover:text-white-600 transition">Skills</a>
+                    <a href="#projects" class="text-white-700 hover:text-white-600 transition">Achievements</a>
+                    <a href="#education" class="text-white-700 hover:text-white-600 transition">Education</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-gray-800 to-gray-700">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">MAJEEBULLAH</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-teal-300">Frontend Developer & Problem Solver
+                </h2>
+                <p class="text-gray-300 mb-8 max-w-lg leading-relaxed">I build clean, responsive web interfaces and
+                    solve challenging coding problems with efficiency.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:majeebullah.web@gmail.com"
+                        class="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg flex items-center transition hover:shadow-lg hover:shadow-teal-900/30">
+                        <i data-feather="mail" class="mr-2"></i> Contact Me
+                    </a>
+                    <a href="#projects"
+                        class="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg flex items-center transition hover:shadow-lg hover:shadow-teal-900/30">
+                        <i data-feather="code" class="mr-2"></i> My Work
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="bg-white p-2 rounded-full shadow-xl">
+                    <img src="https://cdn.pixabay.com/photo/2024/05/15/20/57/developer-8764524_1280.jpg"
+                        alt="Developer Illustration" class="w-48 h-48 rounded-full object-cover object-center scale-125">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <ul class="text-lg text-gray-300 mb-8 leading-relaxed space-y-2 list-disc pl-5">
+                    <li>Frontend Web Developer with strong foundation in HTML, CSS, and DSA</li>
+                    <li>Specializes in building clean, responsive web interfaces</li>
+                    <li>Passionate about solving challenging coding problems</li>
+                    <li>Continuously learning new technologies to create efficient solutions</li>
+                </ul>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/in/majeeb-ullah-20758b375/" target="_blank"
+                        class="flex items-center text-white-700 hover:text-blue-600 transition">
+                        <i data-feather="linkedin" class="mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/mujeebkhan77" target="_blank"
+                        class="flex items-center text-white-700 hover:text-blue-600 transition">
+                        <i data-feather="github" class="mr-2"></i> GitHub
+                    </a>
+                    <a href="mailto:majeebullah.web@gmail.com"
+                        class="flex items-center text-white-700 hover:text-blue-600 transition">
+                        <i data-feather="mail" class="mr-2"></i> majeebullah.web@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-700">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md skill-card transition duration-300 border border-gray-600"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="code" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frontend & Web</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Programming Skills -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md skill-card transition duration-300 border border-gray-600"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i data-feather="cpu" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming & Problem Solving</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">C++</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">DSA</span>
+                    </div>
+                </div>
+
+                <!-- Tools Skills -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md skill-card transition duration-300 border border-gray-600"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i data-feather="tool" class="text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tools & Version Control</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Achievements Section -->
+    <section id="projects" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Projects & Coding Achievements</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Project 1 -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md project-card transition duration-300 border border-gray-600"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="database" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Student Management System</h3>
+                    </div>
+                    <p class="text-white-600 mb-4">A system to manage student data with full CRUD operations.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md project-card transition duration-300 border border-gray-600"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i data-feather="gamepad" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tic-Tac-Toe Game</h3>
+                    </div>
+                    <p class="text-white-600 mb-4">Fully functional game demonstrating logic and problem-solving skills.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-center mb-8" data-aos="fade-up">Coding Achievements</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i data-feather="award" class="w-12 h-12 mx-auto text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">LeetCode</h4>
+                    <p class="text-yellow-600">150+ solved problems</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i data-feather="award" class="w-12 h-12 mx-auto text-purple-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Codewars</h4>
+                    <p class="text-red-600">100+ solved problems</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i data-feather="award" class="w-12 h-12 mx-auto text-green-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">GeeksforGeeks</h4>
+                    <p class="text-green-600">50+ solved problems</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i data-feather="award" class="w-12 h-12 mx-auto text-yellow-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">HackerRank</h4>
+                    <p class="text-green-600">20+ solved problems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-700">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Education & Goals</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- Education -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md mb-8 border border-gray-600" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="book" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Bachelor's in Software Engineering</h3>
+                    </div>
+                    <p class="text-white-600">Currently pursuing</p>
+                </div>
+
+                <!-- Goals -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-md mb-8 border border-gray-600" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="target" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Career Goals & Aspirations</h3>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2 text-white-600">
+                        <li>Become a skilled Web Developer building responsive and dynamic web applications</li>
+                        <li>Contribute to open-source projects and enhance problem-solving skills through competitive
+                            programming</li>
+                        <li>Continuously learn new technologies and expand expertise in full-stack development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 bg-gradient-to-r from-teal-700 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Let's Work Together</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-blue-100" data-aos="fade-up" data-aos-delay="100">
+                Interested in collaborating or have a project in mind? Feel free to reach out!
+            </p>
+            <a href="mailto:majeebullah.web@gmail.com"
+                class="inline-block bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition hover:scale-105"
+                data-aos="fade-up" data-aos-delay="200">
+                <i data-feather="mail" class="inline mr-2"></i> Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-gray-300 border-t border-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold text-white">MAJEEBULLAH</h2>
+                    <p class="text-sm">Frontend Web Developer & Problem Solver</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com" target="_blank"
+                        class="hover:text-teal-300 transition hover:scale-110">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="hover:text-cyan-400 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="mailto:majeebullah.web@gmail.com" class="hover:text-cyan-400 transition">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm">
+                <p>&copy; 2025 Majeebullah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        feather.replace();
+    </script>
+</body>
+
+</html>
